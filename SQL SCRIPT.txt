@@ -1,0 +1,89 @@
+CREATE DATABASE IF NOT EXISTS hotel;
+
+
+-- Create the credentials table
+CREATE TABLE IF NOT EXISTS credentials (
+    LoginID VARCHAR(40),
+    Password VARCHAR(100)
+);
+
+-- Insert data into the credentials table
+INSERT INTO credentials (LoginID, Password) VALUES
+('Yukti_Mulani', 'Alohmora@1234'),
+('Admin', 'Pa$$w0rd1234');
+
+
+-- Create the rooms table
+CREATE TABLE IF NOT EXISTS rooms (
+    RoomID VARCHAR(30),
+    RoomType VARCHAR(50),
+    Status VARCHAR(50),
+    Rate FLOAT(5,2)
+);
+
+-- Insert data into the rooms table
+INSERT INTO rooms (RoomID, RoomType, Status, Rate) VALUES
+('1', 'Single Room', 'Available', 100.00),
+('2', 'Single Room', 'Available', 100.00),
+('3', 'Single Room', 'Available', 100.00),
+('4', 'Single Room', 'Available', 100.00),
+('5', 'Single Room', 'Available', 100.00),
+('6', 'Single Room', 'Available', 100.00),
+('7', 'Single Room', 'Available', 100.00),
+('8', 'Single Room', 'Available', 100.00),
+('9', 'Single Room', 'Available', 100.00),
+('10', 'Single Room', 'Available', 100.00),
+('11', 'Double Room', 'Available', 150.00),
+('12', 'Double Room', 'Available', 150.00),
+('13', 'Double Room', 'Available', 150.00),
+('14', 'Double Room', 'Available', 150.00),
+('15', 'Double Room', 'Available', 150.00),
+('16', 'Double Room', 'Available', 150.00),
+('17', 'Double Room', 'Available', 150.00),
+('18', 'Double Room', 'Available', 150.00),
+('19', 'Double Room', 'Available', 150.00),
+('20', 'Double Room', 'Available', 150.00),
+('21', 'Deluxe Room', 'Available', 200.00),
+('22', 'Deluxe Room', 'Available', 200.00),
+('23', 'Deluxe Room', 'Available', 200.00),
+('24', 'Deluxe Room', 'Available', 200.00),
+('25', 'Deluxe Room', 'Available', 200.00),
+('26', 'Deluxe Room', 'Available', 200.00),
+('27', 'Deluxe Room', 'Available', 200.00),
+('28', 'Deluxe Room', 'Available', 200.00),
+('29', 'Deluxe Room', 'Available', 200.00),
+('30', 'Deluxe Room', 'Available', 200.00),
+('31', 'Penthouse', 'Available', 500.00),
+('32', 'Penthouse', 'Available', 500.00),
+('33', 'Penthouse', 'Available', 500.00),
+('34', 'Penthouse', 'Available', 500.00),
+('35', 'Penthouse', 'Available', 500.00),
+('36', 'Penthouse', 'Available', 500.00),
+('37', 'Penthouse', 'Available', 500.00),
+('38', 'Penthouse', 'Available', 500.00),
+('39', 'Penthouse', 'Available', 500.00),
+('40', 'Penthouse', 'Available', 500.00),
+('0', 'Single Room', 'Available', 100.00);
+
+
+
+--create the reservations table.
+CREATE TABLE IF NOT EXISTS reservations (
+    BookingID INT,
+    RoomID VARCHAR(40),
+    GuestID INT,
+    Title VARCHAR(10),
+    Firstname VARCHAR(30),
+    Lastname VARCHAR(30),
+    Address VARCHAR(40),
+    Phone BIGINT,
+    Email VARCHAR(100),
+    GuestCount INT,
+    RoomType VARCHAR(40),
+    CheckInDate DATE,
+    CheckOutDate DATE,
+    DaysCount INT,
+    Rate FLOAT(5,2),
+    NumberOfRooms INT
+);
+

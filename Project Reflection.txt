@@ -1,0 +1,36 @@
+/**********************************************
+Final Project #
+Course:APD545 - Semester-5
+Last Name:Mulani
+First Name:Yukti 
+ID:156809212
+Section:ZAA
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature Yukti Manoj Mulani
+Date:13th April 2024
+**********************************************/
+Challenges Faced:
+
+Storing Multiple Room IDs: One of the challenges encountered was how to store multiple room IDs in the database when the user selects multiple rooms for booking. Since the database schema had a single column for room IDs, it was initially unclear how to structure the data to accommodate multiple selections.
+
+Data Integrity: Another challenge was ensuring data integrity and consistency while storing and retrieving multiple room IDs. It was essential to prevent data redundancy and ensure that the database remains normalized.
+
+Database Design: Designing an appropriate database schema to handle multiple room selections and maintaining referential integrity presented a significant challenge. It required careful consideration of relational database principles and normalization techniques.
+
+Solutions:
+
+Using String Concatenation: One approach to address the challenge of storing multiple room IDs was to concatenate the selected room IDs into a single string and store it in a dedicated column in the database. This allowed storing multiple IDs in a single database field.
+
+Normalization: To maintain data integrity, the database schema was revised to introduce a separate table for booking details, including room IDs. This normalized the data and allowed for efficient storage and retrieval of booking information.
+
+Database Relationships: Establishing appropriate relationships between tables, such as one-to-many relationships between bookings and rooms, helped ensure data consistency and integrity. Foreign key constraints were used to enforce referential integrity.
+
+Learnings:
+
+Flexibility in Solutions: This project highlighted the importance of flexibility in problem-solving. There isn't always a single "correct" solution, and different approaches may be suitable depending on the specific requirements and constraints of the project.
+
+Database Design Principles: Working on the database aspect of the project provided valuable insights into database design principles and normalization techniques. It emphasized the significance of designing database schemas that optimize data storage and retrieval.
+
+Adaptability: Adapting to changes in project requirements and refining solutions based on feedback and new insights was a crucial learning experience. It reinforced the importance of iterative development and continuous improvement.
+
+In conclusion, the project's challenges, particularly regarding storing multiple room IDs in the database, provided opportunities for problem-solving and learning. By exploring various solutions and considering database design principles, valuable insights were gained into effective data management and system design.
