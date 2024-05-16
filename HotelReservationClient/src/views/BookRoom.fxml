@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RoomBookingController">
+   <content>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" style="-fx-background-color: ECE5BF;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="4.0" prefHeight="51.0" prefWidth="577.0" style="-fx-background-color: C5B353;" text="Book a Room" AnchorPane.leftAnchor="17.333333333333258" AnchorPane.rightAnchor="17.333333333333258">
+               <font>
+                  <Font name="Broadway" size="36.0" />
+               </font>
+            </Label>
+            <HBox layoutX="100.0" layoutY="100.0" spacing="50.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="10.0" prefWidth="80.0" text="No of People" />
+                              <TextField fx:id="peoplecountfield" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Availabel Rooms" />
+                              <Label fx:id="roomsAvailabel" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Label text="Room Type" />
+                              <CheckBox fx:id="cb1" mnemonicParsing="false" onAction="#cb1Selected" text="Single Room" />
+                              <CheckBox fx:id="cb2" mnemonicParsing="false" onAction="#cb2Selected" text="Double Room" />
+                              <CheckBox fx:id="cb3" mnemonicParsing="false" onAction="#cb3Selected" text="Deluxe Room" />
+                              <CheckBox fx:id="cb4" mnemonicParsing="false" onAction="#cb4Selected" text="Penthouse" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Label text="No of Days" />
+                              <TextField fx:id="dayscountfield" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Label text="Rate/Night" />
+                              <Label fx:id="ratelabel" alignment="CENTER" prefHeight="25.0" prefWidth="153.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="50.0">
+                           <children>
+                              <Label text="CheckIn Date" />
+                              <DatePicker fx:id="checkIn" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="50.0">
+                           <children>
+                              <Label text="CheckOut Date" />
+                              <DatePicker fx:id="CheckOut" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="50.0">
+                           <children>
+                              <Button fx:id="donebutton" mnemonicParsing="false" onAction="#doneButtonPressed" text="Done" />
+                              <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="20.0">
+                     <children>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label fx:id="nosr" alignment="CENTER" contentDisplay="CENTER" text="No of Single Rooms" />
+                              <Spinner fx:id="sp1" editable="true" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label fx:id="nodr" alignment="CENTER" contentDisplay="CENTER" text="No of Double Rooms" />
+                              <Spinner fx:id="sp2" editable="true" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label fx:id="nopr" alignment="CENTER" contentDisplay="CENTER" text="No of Penthouses" />
+                              <Spinner fx:id="sp4" editable="true" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label fx:id="noder" alignment="CENTER" contentDisplay="CENTER" text="No of Deluxe Rooms" />
+                              <Spinner fx:id="sp3" editable="true" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

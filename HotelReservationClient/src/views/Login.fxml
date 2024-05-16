@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: F3EBBF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="5.0" prefHeight="61.0" prefWidth="580.0" style="-fx-background-color: B8A647;" text="LOGIN" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="Broadway" size="36.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <VBox layoutX="500.0" layoutY="200.0" spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="63.0" text="UserID">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="useridfield" prefHeight="33.0" prefWidth="149.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="79.0" text="Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordfield" prefHeight="33.0" prefWidth="149.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Button fx:id="loginbutton" mnemonicParsing="false" onAction="#loginbuttonpressed" text="LogIn" />
+                  <Button fx:id="baclbutton" mnemonicParsing="false" onAction="#backbuttonpressed" text="Back" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

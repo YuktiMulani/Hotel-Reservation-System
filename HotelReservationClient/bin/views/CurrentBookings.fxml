@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BookingsController">
+   <content>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" style="-fx-background-color: ECE5BF;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="4.0" prefHeight="51.0" prefWidth="577.0" style="-fx-background-color: C5B353;" text="Current Bookings" AnchorPane.leftAnchor="17.333333333333258" AnchorPane.rightAnchor="17.333333333333258">
+               <font>
+                  <Font name="Broadway" size="36.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER_LEFT" layoutX="44.0" layoutY="131.0" prefHeight="241.0" prefWidth="563.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="379.0">
+                     <children>
+                        <Label text="Number of current bookings:" />
+                        <Label fx:id="noofbookings" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableview" editable="true" prefHeight="200.0" prefWidth="568.0" style="-fx-background-color: C5B353;">
+                    <columns>
+                      <TableColumn fx:id="bookingidColumn" prefWidth="73.33333969116211" text="BookingID" />
+                      <TableColumn fx:id="nameColumn" prefWidth="144.6666488647461" text="Guest Name" />
+                        <TableColumn fx:id="roomTypeColumn" prefWidth="122.66668701171875" text="Room Type" />
+                        <TableColumn fx:id="noofroomsColumn" prefWidth="115.99993896484375" text="Number of Rooms" />
+                        <TableColumn fx:id="daysColumn" prefWidth="104.00003051757812" text="Number of Days" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <Button fx:id="backButton" layoutX="561.0" layoutY="380.0" mnemonicParsing="false" onAction="#BackButtonPressed" prefHeight="53.0" prefWidth="80.0" text="Back" AnchorPane.bottomAnchor="44.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
